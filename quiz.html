@@ -8,21 +8,182 @@
     <link rel="stylesheet" href="css/page.css">
     <a href="grading.html">Go to Grading</a>
     <a href="about_me.html">Go to About Us</a>
-
+   
+    header {
+            color: white;
+            background-color: cadetblue; 
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+       
+        }
+      #startButton {
+          display: block;
+          margin: 20px auto;
+          padding: 10px 20px;
+          background-color: orangered;
+          color: white;
+          border: none;
+          cursor: pointer;
+          text-align: center;
+      }
+      #startButton:hover {
+          background-color: green;
+      }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Quiz</h1>
-    </header>
+    <header>USA Comprehension Test</header>
+  <p> IMPORTANT: To start the USA Comprehension Test,  Please scroll to the bottom of the page and click the start game button. After you complete the test please click on the grading/rubric tab</p>
+ 
+    <p>The United States of America, a federal republic, is composed of 50 states that span across North America, each contributing 
+    its unique heritage, culture, and geography to the rich tapestry of the nation. These states vary widely in size, population, 
+    and climate, from the vast wilderness of Alaska, the largest state by area, to the densely populated state of New Jersey. 
+    The diversity among the states is profound, with landscapes ranging from the arid deserts of Arizona to the lush forests of Vermont. 
+    This geographical diversity contributes to a wide range of climates, economies, and ways of life. For instance, Florida is renowned 
+    for its warm climate and attracts millions of visitors to its beaches and theme parks annually,
+    while Colorado, known for its rugged mountains, is a haven for ski enthusiasts and hikers.
 
-    <main>
-        <h2>About Us</h2>
-        <p>This is a simple HTML page.</p>
-    </main>
+    The inception of the United States began with the original 13 colonies, which declared independence from British rule in 1776.
+    These colonies later became the first 13 states of the Union, after ratifying the U.S. Constitution. The country's expansion westward
+    and the acquisition of territories through treaties, purchases, and conflicts eventually led to the formation of additional states. 
+    The last two states to join the Union were Alaska and Hawaii in 1959, both of which are geographically distinct from the contiguous United States. 
+    Hawaii, an archipelago in the central Pacific, is the only state composed entirely of islands and has a unique cultural heritage influenced by indigenous 
+    and Asian American cultures. Alaska, separated from the contiguous states by Canada, is the least densely populated state, offering vast natural resources 
+    and spectacular wilderness.
 
-    <footer>
+    Each state in the U.S. operates with a degree of autonomy, having its own constitution, government, and laws, which allows for a significant variety 
+    in policies, governance, and cultural norms across the country. This federal system ensures that while the federal government has powers over matters 
+    that affect the country as a whole, states retain considerable control over local issues. This structure is designed to balance power between the national 
+    and state governments. Economically, states like California, with its technology and entertainment industries, and Texas, with its oil and agriculture, 
+    significantly contribute to the national economy. Meanwhile, states like New York, with New York City at its helm, play a pivotal role in finance, culture, 
+    and international diplomacy. The diversity of the 50 states, in every aspect, makes the United States a complex and dynamic federation, offering a wide array 
+    of experiences, opportunities, and challenges. </p>
+    <div id ="userInputForm"></div>
+    <div id ="dateAndTime"></div>
+    <div id ="quoteOfTheDay"></div>
+
+<button id="startButton">Start Game</button>
+    
+<script>
+'use strict';
+        const userInputForm = document.getElementById("userInputForm");
+        const dateAndTime = document.getElementById("dateAndTime");
+        const quoteOfTheDay = document.getElementById("quoteOfTheDay");
+
+        // Form submission handler
+        userInputForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const userName = document.getElementById("userName").value;
+            alert(`Hello, ${userName}!`);
+        });
+
+        // Update date and time
+        function updateDateTime() {
+            const now = new Date();
+            dateAndTime.innerText = now.toLocaleString();
+        }
+        setInterval(updateDateTime, 1000); // Update every second
+
+        // Change the quote of the day (sample quotes)
+        const quotes = [
+            "The universe is full of stars waiting to be discovered.",
+            "Look up at the stars and not down at your feet.",
+            "Stars can't shine without darkness.",
+        ];
+        function updateQuoteOfTheDay() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteOfTheDay.innerText = `"${quotes[randomIndex]}"`;
+        }
+        updateQuoteOfTheDay(); // Initial quote
+        setInterval(updateQuoteOfTheDay, 10000); // Change every 10 seconds  
+// button below
+const myButton = document.getElementById('startButton');
+    
+function askYesNoQuestion(question) {
+    let answer;
+    do {
+        answer = prompt(question).toLowerCase();
+    } while (answer !== 'y' && answer !== 'yes' && answer !== 'n' && answer !== 'no');
+    return answer === 'y' || answer === 'yes';
+}
+
+function startGame() {
+    let userName = prompt('What is your name?');
+    alert(`Welcome to the USA Comprehension Test, ${userName}!`);
+
+    let questions = [
+        'Does Alaska have the largest area among the 50 states? (yes/no)',
+        'Is New Jersey known for having the smallest land area in the United States? (yes/no)',
+        'Does Florida have a cold climate attracting ski enthusiasts annually? (yes/no)',
+        'Is Colorado famous for its beaches and theme parks? (yes/no)',
+        'Were the original 13 colonies the first to join the Union? (yes/no)',
+        'Did Alaska and Hawaii join the Union before the 20th century? (yes/no)',
+        'Is Hawaii located in the Atlantic Ocean? (yes/no)',
+        'Does Alaska share a border with Mexico? (yes/no)',
+        'Does each state in the U.S. have its own government and constitution? (yes/no)',
+        'Is the federal government responsible for local issues within states? (yes/no)',
+        'Is California primarily known for its agriculture and oil industries? (yes/no)',
+        'Does Texas have a significant technology and entertainment industry? (yes/no)',
+        'Is New York City recognized as a major agricultural center? (yes/no)',
+        'Are the 50 states similar in size, population, and climate? (yes/no)',
+        'Is Vermont known for its arid desert landscape? (yes/no)',
+        'Are Alaska natural resources and wilderness insignificant to its economy? (yes/no)',
+        'Is the U.S. Constitution ratified by the original 13 colonies before 1776? (yes/no)',
+        'Does the federal system limit states from having any control over local matters? (yes/no)',
+        'Is New York City irrelevant in finance, culture, and international diplomacy? (yes/no)',
+        'Does Hawaii consist entirely of peninsulas? (yes/no)'
+    ];
+
+    let correctAnswers = ['yes', 'no', 'no', 'no', 'yes', 'no', 'no', 'no', 'yes', 'no', 'yes', 'yes', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'];
+    let score = 0;
+
+    for (let i = 0; i < questions.length; i++) {
+        let userAnswer = askYesNoQuestion(questions[i]);
+        let correct = correctAnswers[i] === 'yes';
+        if ((userAnswer && correct) || (!userAnswer && !correct)) {
+            alert('Correct!');
+            score++;
+        } else {
+            alert('Incorrect!');
+        }
+    }
+
+    alert(`${userName}, your final score is ${score} out of ${questions.length}.`);
+}
+
+myButton.addEventListener("click", function() {
+    startGame();
+});
         
-    </footer>
+
+//<script src = "js/quiz.js"></script>
+</script>
 </body>
-<script src = "js/quiz.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
