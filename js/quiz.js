@@ -19,9 +19,9 @@ setInterval(updateDateTime, 1000); // Update every second
 
 // Change the quote of the day (sample quotes)
 const quotes = [
-    "The universe is full of stars waiting to be discovered.",
-    "Look up at the stars and not down at your feet.",
-    "Stars can't shine without darkness.",
+    "The information above is all false.",
+    "There are no facts in the information provided above.",
+    "This test cant be passed.",
 ];
 function updateQuoteOfTheDay() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
