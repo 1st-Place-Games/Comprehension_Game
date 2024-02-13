@@ -22,3 +22,4 @@ Educational Device
 MVP
 Users be able to answer 20 questions and get a score
 None at the moment
+![wireframe](https://github.com/1st-Place-Games/Comprehension_Game/assets/156013482/9efa6a02-a855-4d44-90ea-3123b3c19e8b)
