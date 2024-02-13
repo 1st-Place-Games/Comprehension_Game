@@ -118,3 +118,7 @@ p {
     line-height: 1.6;
     color: #333;
 }
+
+textarea#fname {
+    max-width: 400px;
+}
