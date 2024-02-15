@@ -6,20 +6,8 @@
 body, h1, h2, p, div {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    /* gpt */
-    font-size: 18px;
-    line-height: 1.6;
-    font-weight: bold;
-}
-
-body, h1, h2, p, div {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; 
+    overflow: scroll;
 }
 
 body {
@@ -33,33 +21,9 @@ body {
     background-size: cover;
 }
 
-.container {
-    position: absolute; 
-    width: 150%; 
-    height: 500px;
-    max-width: 1000px; 
-    margin: auto;
-  }
-
-  .container img {
-    width: 150%;
-    height: 500px;
-    display: block; 
-  }
-
-  .container .content {
-    position: absolute;
-    left: 0; 
-    bottom: 0;
-    height: 500px;
-    background: rgba(0, 0, 0, 0.5); 
-    color: #f1f1f1;
-    width: 150%;
-    padding: 20px;
-    box-sizing: border-box; 
-    overflow: scroll;
-  }
-
+.BIGINFO {
+    color: blue;
+}
 
 .the_head {
     background-color: black;
