@@ -16,6 +16,23 @@ body {
     line-height: 1.6;
     font-weight: bold;
 }
+
+body, h1, h2, p, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+    background: url('../img/flagimage.png') no-repeat center center fixed;
+    /* You can also use 'cover' to make sure the image covers the whole screen */
+    background-size: cover;
+}
+
 .container {
     position: absolute; 
     width: 150%; 
