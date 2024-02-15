@@ -34,6 +34,8 @@ const quotes = [
   "The information above is all false.",
   "There are no facts in the information provided above.",
   "This test can't be passed.",
+  "Answer to the question 6 is 84",
+  "Russia is smaller than Texas",
 ];
 
 function updateQuoteOfTheDay() {
@@ -74,7 +76,9 @@ function initializeQuiz() {
     { question: 'Is the U.S. Constitution ratified by the original 13 colonies before 1776', answer: 'no' },
     { question: 'Does the federal system limit states from having any control over local matters', answer: 'no' },
     { question: 'Is New York City irrelevant in finance, culture, and international diplomacy', answer: 'no' },
-    { question: 'Does Hawaii consist entirely of peninsulas', answer: 'no' }
+    { question: 'Does Hawaii consist entirely of peninsulas', answer: 'no' },
+    { question: '(BONUS QUESTION) Is the answer the question 6 84?', answer:'yes' },
+    { question: '(BONUS QUESTION) According to the rotating quotes is Russia smaller than Texas', answer: 'no'}
   ];
 
   // Display the first question
