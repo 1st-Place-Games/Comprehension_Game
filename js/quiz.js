@@ -1,4 +1,3 @@
-'use strict'
 'use strict';
 
 const userInputForm = document.getElementById("userInputForm");
@@ -37,9 +36,6 @@ const quotes = [
   "This test can't be passed.",
 ];
 
-
-
-
 function updateQuoteOfTheDay() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   quoteOfTheDay.innerText = `"${quotes[randomIndex]}"`;
@@ -47,21 +43,6 @@ function updateQuoteOfTheDay() {
 
 updateQuoteOfTheDay(); // Initial quote
 setInterval(updateQuoteOfTheDay, 10000); // Change every 10 seconds  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 startButton.addEventListener("click", function() {
   initializeQuiz();
