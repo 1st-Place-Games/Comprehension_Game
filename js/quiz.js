@@ -7,6 +7,9 @@ const startButton = document.getElementById("startButton");
 const quizContainer = document.getElementById("quizContainer");
 const quizForm = document.getElementById("quizForm");
 const submitButton = document.getElementById("submitButton");
+const audio = document.getElementById('background-audio');
+const audioContainer = document.getElementById('audio-container');
+
 
 let userName;
 let questions = [];
@@ -45,7 +48,17 @@ function updateQuoteOfTheDay() {
 
 updateQuoteOfTheDay(); // Initial quote
 setInterval(updateQuoteOfTheDay, 10000); // Change every 10 seconds  
-
+// AUDIO ON SCROLL FUNCTION START
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200){ // range of the scroll until it plays
+      audio.play();
+      audioContainer.style.display = 'block';
+  } else {
+      audio.pause();
+      audioContainer.style.display = 'none';
+  }
+});
+// AUDIO ON SCROLL FUNCTION END
 startButton.addEventListener("click", function() {
   initializeQuiz();
 });
@@ -61,7 +74,7 @@ function initializeQuiz() {
     { question: 'Is New Jersey known for having the smallest land area in the United States?', answer: 'no' },
     { question: 'Does Florida have a cold climate attracting ski enthusiasts annually?', answer: 'no' },
     { question: 'Is Colorado famous for its beaches and theme parks?', answer: 'no' },
-    { question: 'Were the original 13 colonies the first to join the Unio?', answer: 'yes' },
+    { question: 'Were the original 13 colonies the first to join the Union?', answer: 'yes' },
     { question: 'Did Alaska and Hawaii join the Union before the 20th century?', answer: 'no' },
     { question: 'Is Hawaii located in the Atlantic Oceanu?', answer: 'no' },
     { question: 'Does Alaska share a border with Mexico?', answer: 'no' },
@@ -77,8 +90,8 @@ function initializeQuiz() {
     { question: 'Does the federal system limit states from having any control over local matters', answer: 'no' },
     { question: 'Is New York City irrelevant in finance, culture, and international diplomacy', answer: 'no' },
     { question: 'Does Hawaii consist entirely of peninsulas', answer: 'no' },
-    { question: '(BONUS QUESTION) Is the answer the question 6 84?', answer:'yes' },
-    { question: '(BONUS QUESTION) According to the rotating quotes is Russia smaller than Texas', answer: 'no'}
+    { question: '(BONUS QUESTION) Is the answer the question 6 84?', answer: 'yes' },
+    { question: '(BONUS QUESTION) According to the rotating quotes is Russia smaller than Texas', answer: 'yes' }
   ];
 
   // Display the first question
@@ -87,22 +100,6 @@ function initializeQuiz() {
   // Show the quiz container
   quizContainer.style.display = 'block';
   startButton.style.display = 'none';
-}
-
-function displayQuestion() {
-  const currentQuestionData = questions[currentQuestion];
-  const questionElement = document.createElement('div');
-  questionElement.innerHTML = `
-    <p>${currentQuestionData.question}</p>
-    <label>
-      <input type="radio" name="answer" value="yes"> Yes
-    </label>
-    <label>
-      <input type="radio" name="answer" value="no"> No
-    </label>
-`;
-  quizForm.innerHTML = ''; // Clear previous question
-  quizForm.appendChild(questionElement);
 }
 
 function submitAnswer() {

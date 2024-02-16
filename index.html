@@ -23,8 +23,11 @@
     </form>
     <div id ="dateAndTime"></div>
     <div id ="quoteOfTheDay"></div>
-    <audio id="audio" src="SebastianPangal-TheSummit(1).mp3" controls loop muted autoplay></audio>
-
+    <div id="audio-container">
+      <audio id="background-audio" controls loop>
+          <source src="SebastianPangal-TheSummit(1).mp3" type="audio/mp3">
+      </audio>
+    </div>
 
   <!-- <div class="container"> -->
     <!-- <img src="flagimage.png" alt="Notebook" style="width:100%;"> -->
@@ -101,10 +104,7 @@
       
       of experiences, opportunities, and challenges. </p>
     </div>
-    </div>  
-    <!-- <div id ="userInputForm"></div> -->
-    <!-- <div id ="dateAndTime"></div>
-    <div id ="quoteOfTheDay"></div> -->
+    </div>
  
 
 <button id="startButton">Start Game</button>
