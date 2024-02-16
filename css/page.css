@@ -4,7 +4,7 @@
 *, h1, p{font-size :30px;} */
 
 body, h1, h2, p, div {
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
     /* box-sizing: border-box; 
     overflow: scroll; */
@@ -53,9 +53,25 @@ nav a:hover {
 }
 
 header {
-    padding: 20px;
-    background-color: #ddd;
-    border-bottom: 1px solid #ddd;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add some padding for spacing */
+
+    /* Add a gradient effect */
+    background: linear-gradient(to right, #333, #555);
+}
+
+/* Style the link */
+a {
+    color: #fff; /* White text color for the link */
+    text-decoration: none; /* Remove the underline */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Change the link color on hover */
+a:hover {
+    color: #bbb; /* A slightly lighter color on hover */
 }
 
 main {
@@ -63,7 +79,7 @@ main {
 }
 
 h1, h2 {
-    color: #333;
+    /* color: #333; */
 }
 
 .main-container {
@@ -166,7 +182,7 @@ textarea#fname {
     background-color: #f5f5f5;
   }
 
-  
+
   #audio-container {
     position: fixed;
     bottom: 20px;
