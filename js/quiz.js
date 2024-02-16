@@ -21,7 +21,7 @@ let score = 0;
 userInputForm.addEventListener("submit", function(e) {
   e.preventDefault();
   userName = document.getElementById("userName").value;
-  alert(`Hello, ${userName}!`);
+  alert(`Hello, ${userName}!Welcome to our Test!`);
   initializeQuiz();
 });
 
@@ -37,7 +37,7 @@ const quotes = [
   "The information above is all false.",
   "There are no facts in the information provided above.",
   "This test can't be passed.",
-  "Answer to the question 6 is 84",
+  "The Answer to the question six is 84",
   "Russia is smaller than Texas",
 ];
 
@@ -76,7 +76,7 @@ function initializeQuiz() {
     { question: 'Is Colorado famous for its beaches and theme parks?', answer: 'no' },
     { question: 'Were the original 13 colonies the first to join the Union?', answer: 'yes' },
     { question: 'Did Alaska and Hawaii join the Union before the 20th century?', answer: 'no' },
-    { question: 'Is Hawaii located in the Atlantic Oceanu?', answer: 'no' },
+    { question: 'Is Hawaii located in the Atlantic Ocean?', answer: 'no' },
     { question: 'Does Alaska share a border with Mexico?', answer: 'no' },
     { question: 'Does each state in the U.S. have its own government and constitution?', answer: 'yes' },
     { question: 'Is the federal government responsible for local issues within states?', answer: 'no' },
@@ -90,8 +90,8 @@ function initializeQuiz() {
     { question: 'Does the federal system limit states from having any control over local matters', answer: 'no' },
     { question: 'Is New York City irrelevant in finance, culture, and international diplomacy', answer: 'no' },
     { question: 'Does Hawaii consist entirely of peninsulas', answer: 'no' },
-    { question: '(BONUS QUESTION) Is the answer the question 6 84?', answer: 'yes' },
-    { question: '(BONUS QUESTION) According to the rotating quotes is Russia smaller than Texas', answer: 'yes' }
+    { question: '(BONUS QUESTION) According to the rotating quotes is the answer to question six the number 84?', answer: 'yes' },
+    { question: '(BONUS QUESTION) According to the rotating quotes is Russia smaller than Texas?', answer: 'yes' }
   ];
 
   // Display the first question
